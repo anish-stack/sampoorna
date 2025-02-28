@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-slate-900 text-gray-300 py-12 px-8 relative overflow-hidden">
+    <footer className="bg-slate-900 text-gray-300 py-12 md:px-8 px-2 relative overflow-hidden">
       {/* Grid and Dots Background */}
       <div className="absolute inset-0 grid grid-cols-[repeat(20,minmax(0,1fr))] grid-rows-[repeat(20,minmax(0,1fr))] opacity-10">
         {[...Array(400)].map((_, i) => (
@@ -66,24 +66,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter Section */}
-          <div className=" p-6 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Stay Updated</h2>
-            <p className="text-sm mb-4">Subscribe to our newsletter for the latest updates and offers.</p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 flex-grow"
-              />
-              <button
-                type="submit"
-                className="bg-orange-600 text-white px-4 py-2 rounded-r-md hover:bg-orange-700 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
+         
         </div>
 
         {/* Bottom Section */}

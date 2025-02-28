@@ -4,7 +4,7 @@ import { toast, Toaster } from "sonner"
 import { ButtonsCard } from "@/components/ui/tailwindcss-buttons"
 
 export default function TailwindcssButtons() {
-  const copy = (button: any) => {
+  const copy = (button) => {
     if (button.code) {
       copyToClipboard(button.code)
       return

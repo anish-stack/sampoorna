@@ -40,7 +40,7 @@ export const TextGenerateEffect = ({
             key={word + idx}
             className={`dark:text-white ${
               idx === 1
-                ? "bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent"
+                ? "bg-gradient-to-r text-2xl md:text-9xl from-orange-500 to-yellow-400 bg-clip-text text-transparent"
                 : idx === 2
                 ? "bg-gradient-to-r from-green-500 to-green-700 bg-clip-text text-transparent"
                 : "text-white"
@@ -61,7 +61,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-0 px-5 md:px-0">
-        <div className=" dark:text-white text-3xl text-white md:text-9xl text-center leading-snug md:leading-[10.2rem] md:tracking-tight">
+        <div className=" dark:text-white text-5xl   text-white md:text-9xl text-center leading-[3.2rem]  md:leading-[10.2rem] md:tracking-tight">
           {renderWords()}
         </div>
       </div>

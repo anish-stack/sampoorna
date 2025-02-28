@@ -44,25 +44,25 @@ export const BentoGridItem = ({
 
   return (
     <motion.div
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.3 }}
-    transition={{ duration: 0.8, ease:animationVariant || "easeIn" }}
-    whileHover={{
-      scale: 1.02,
-      boxShadow:
-        "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-    }}
-   
-    className={cn(
-      `relative overflow-hidden rounded-xl cursor-pointer
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: animationVariant || "easeIn" }}
+      whileHover={{
+        scale: 1.02,
+        boxShadow:
+          "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      }}
+
+      className={cn(
+        `relative overflow-hidden rounded-xl cursor-pointer
        group bg-gradient-to-br from-slate-900 to-slate-800
        border border-slate-700/50 hover:border-orange-500/50`,
-       className
-      //  window.innerWidth > 640 && className // Only apply className on larger screens
-    )}
-  >
-  
+
+        className 
+      )}
+    >
+
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-70 z-10" />
 
 
@@ -71,17 +71,17 @@ export const BentoGridItem = ({
       <div className="relative h-full w-full rounded-xl p-6 flex flex-col justify-end z-20 overflow-hidden">
         {header && (
           <div className="absolute inset-0 w-full h-full">
-           
+
             <Image
               src={header}
               alt={title?.toString() || "Bento Item"}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
 
-         
-           {overLay && (
-             <div className="absolute inset-0 bg-slate-900/50"></div>
-           )}
+
+            {overLay && (
+              <div className="absolute inset-0 bg-slate-900/50"></div>
+            )}
           </div>
         )}
 

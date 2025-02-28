@@ -20,14 +20,18 @@ export const MenuItem: React.FC<MenuItemProps> = ({
 }) => {
   return (
     <div className="relative">
+      <Link
+        href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}>
+
+
       <motion.button
         onHoverStart={() => setActive(item)}
         onHoverEnd={() => setActive(null)}
         className={cn(
-          "px-4 py-2 rounded-md text-sm font-medium transition-colors relative",
+          "px-4 py-2 rounded-md cursor-pointer text-sm font-medium transition-colors relative",
           active === item
             ? "text-green-600"
-            : "text-gray-700 hover:text-orange-600"
+            : "text-white hover:text-orange-600"
         )}
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -44,6 +48,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({
           />
         )}
       </motion.button>
+        </Link>
       {active === item && children && (
         <motion.div
           initial={{ opacity: 0, y: 10, scale: 0.95 }}

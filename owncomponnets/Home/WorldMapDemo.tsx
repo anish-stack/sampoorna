@@ -6,27 +6,20 @@ import { motion } from "motion/react";
 export function WorldMapDemo() {
     return (
         <div className=" py-10 dark:bg-black bg-gray-900 w-full">
-            <div className="max-w-7xl mx-auto text-center">
-                <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
-                   <Cover>Our Distribution in all Over India</Cover>
-                    <span className="text-neutral-400">
-                        {"Connectivity".split("").map((word, idx) => (
-                            <motion.span
-                                key={idx}
-                                className="inline-block"
-                                initial={{ x: -10, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 0.5, delay: idx * 0.04 }}
-                            >
-                                {word}
-                            </motion.span>
-                        ))}
-                    </span>
-                </p>
-                <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-                Our nationwide distribution network ensures seamless, timely delivery across India through strategic hubs and strong logistics.
-                </p>
-            </div>
+          <div className="py-5 px-4 md:px-6 lg:px-8 bg-gray-900 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto text-center">
+        <p className="font-bold text-2xl md:text-4xl dark:text-white text-black mb-4 md:mb-6">
+          <Cover>Our Distribution in all Over India</Cover>
+          <span className="text-neutral-400 ml-2 md:ml-4">
+          Connectivity
+          </span>
+        </p>
+        <p className="text-sm md:text-lg text-neutral-500 dark:text-neutral-400 max-w-2xl mx-auto py-4">
+          Our nationwide distribution network ensures seamless, timely delivery
+          across India through strategic hubs and strong logistics.
+        </p>
+      </div>
+    </div>
             <WorldMap
                 dots={[
                     {
